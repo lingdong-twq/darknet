@@ -1,6 +1,12 @@
 #include "darknet.h"
 
+#ifdef WIN32
+#include <time.h>
+#include <winsock.h>
+#include "gettimeofday.h"
+#else
 #include <sys/time.h>
+#endif
 
 void demo_art(char *cfgfile, char *weightfile, int cam_index)
 {

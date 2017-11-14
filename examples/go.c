@@ -2,11 +2,21 @@
 
 #include <assert.h>
 #include <math.h>
+#ifdef WIN32
+#include "unistd.h"
+#include <time.h>
+#include <winsock2.h>
+#include <winsock.h>
+#include "gettimeofday.h"
+#include <windows.h>
+#else
 #include <unistd.h>
+#endif
 
 int inverted = 1;
 int noi = 1;
-static const int nind = 10;
+//static const int nind = 10;
+#define nind 10
 int legal_go(float *b, float *ko, int p, int r, int c);
 int check_ko(float *x, float *ko);
 
