@@ -85,6 +85,7 @@ typedef enum {
     XNOR,
     REGION,
     REORG,
+	SHUFFLE,
     BLANK
 } LAYER_TYPE;
 
@@ -172,6 +173,7 @@ struct layer{
     int reorg;
     int log;
     int tanh;
+	int group_;
 
     float alpha;
     float beta;
